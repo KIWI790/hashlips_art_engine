@@ -26,7 +26,9 @@ const {
   category,
   creator,
   maxSupply,
-  useAdditionalData
+  useAdditionalData,
+  extraMetadata,
+  royaltyPercent
 } = require(path.join(basePath, "/src/config.js"));
 const canvas = createCanvas(format.width, format.height);
 const ctx = canvas.getContext("2d");
@@ -124,7 +126,7 @@ const addMetadata = (_dna, _edition) => {
     edition: _edition,
     properties: {},
     royalties: {
-      numerator: 5,
+      numerator: royaltyPercent,
       denominator: 100,
       fallbackFee: 100
     },
