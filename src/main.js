@@ -25,10 +25,8 @@ const {
   debugLogs,
   category,
   creator,
-  maxSupply,
   useAdditionalData,
   extraMetadata,
-  royaltyPercent
 } = require(path.join(basePath, "/src/config.js"));
 const canvas = createCanvas(format.width, format.height);
 const ctx = canvas.getContext("2d");
@@ -112,26 +110,23 @@ const drawBackground = () => {
   ctx.fillRect(0, 0, format.width, format.height);
 };
 
+
 const addMetadata = (_dna, _edition) => {
   let dateTime = Date.now();
   let tempMetadata = {
-    dna: sha1(_dna.join("")),
     creator: creator,
-    category: category,
-    name: `${useAdditionalData ? addedData[_edition -1] : creator +' #'+ _edition}`,
     description: description,
+    format: "none",
+    name: `${useAdditionalData ? addedData[_edition -1] : creator +' #'+ _edition}`,
     image: `${baseUri}/${_edition}.png`,
-    supply: maxSupply,
-    date: dateTime,
-    edition: _edition,
-    properties: {},
-    royalties: {
-      numerator: royaltyPercent,
-      denominator: 100,
-      fallbackFee: 100
+    type: "image/png",
+    properties: {
+      edition: _edition,
+      dna: sha1(_dna.join("")),
+      category: category,
+      compiler: "Turtle Moon Tools",
     },
     attributes: attributesList,
-    compiler: "Turtle Moon Tools",
   };
   tempMetadata.properties = extraMetadata;
   metadataList.push(tempMetadata);

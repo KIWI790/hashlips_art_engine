@@ -22,7 +22,7 @@ const layerConfigurations = [
   },
 ];
 
-// UPDATE THIS TO: The maximum number of mints of this collection
+// UPDATE THIS TO: The creator of this collection
 const creator = "Turtle Moon";
 
 // UPDATE THIS TO: A category that makes sense for your art. Digital Art, Collectible, Art, Document, Music, Photo, Other
@@ -30,9 +30,6 @@ const category = "Digital Art";
 
 // UPDATE THIS TO: The maximum number of mints of this collection
 const maxSupply = '8,192'
-
-// UPDATE THIS TO: total % of royalty on Token. 
-const royaltyPercent = 5
 
 // UPDATE THIS DESCRIPTION. Your own description would be best :)
 const description = `${creator} are a collection of ${maxSupply} randomly generated NFTs that exist on the Hedera network.`;
@@ -84,5 +81,4 @@ module.exports = {
   creator,
   maxSupply,
   useAdditionalData,
-  royaltyPercent,
 };
