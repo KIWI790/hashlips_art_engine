@@ -119,6 +119,7 @@ const addMetadata = (_dna, _edition) => {
     format: "none",
     name: `${useAdditionalData ? addedData[_edition -1] : creator +' #'+ _edition}`,
     image: `${baseUri}/${_edition}.png`,
+    edition: _edition,
     type: "image/png",
     properties: {
       edition: _edition,
