@@ -9,30 +9,30 @@ const baseUri = "ipfs://LinkIsRepleacedWhenUploadingWithTurtleMoonTools";
 // If you have selected Solana then the collection starts from 0 automatically
 const layerConfigurations = [
   {
-    growEditionSizeTo: 5,
+    growEditionSizeTo: 5000,
     layersOrder: [
       { name: "Background" },
-      { name: "Eyeball" },
-      { name: "Eye color" },
-      { name: "Iris" },
-      { name: "Shine" },
-      { name: "Bottom lid" },
-      { name: "Top lid" },
+      { name: "NZ" },
+      { name: "Feet" },
+      { name: "Body" },
+      { name: "Head" },
+      { name: "Addon" },
+    
     ],
   },
 ];
 
 // UPDATE THIS TO: The creator of this collection
-const creator = "Turtle Moon";
+const creator = "Pelican";
 
 // UPDATE THIS TO: A category that makes sense for your art. Digital Art, Collectible, Art, Document, Music, Photo, Other
-const category = "Digital Art";
+const category = "Digital 3D Art";
 
 // UPDATE THIS TO: The maximum number of mints of this collection
-const maxSupply = '8,192'
+const maxSupply = '5,000'
 
 // UPDATE THIS DESCRIPTION. Your own description would be best :)
-const description = `${creator} are a collection of ${maxSupply} randomly generated NFTs that exist on the Hedera network.`;
+const description = `${creator} are a collection of ${maxSupply} randomly 3D generated NFTs that exist on the Hedera network.`;
 
 const shuffleLayerConfigurations = false;
 
